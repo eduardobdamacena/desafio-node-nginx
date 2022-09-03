@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Full Cycle Rocks!</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+<body>
+    <div class="container">
+        <p>
+            <p><h1>Full Cycle Rocks!</h1></p>
+        <p>
+        <form action="/name/new" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Cadastrar">
+        </form>
+        <p>
+            <p>- Lista de nomes cadastrada no banco de dados:</p>
+            <table>
+                <% for(var i=0; i < names.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= names[i].id %> - <%= names[i].name %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        <p>     
+    </div>
+</body>
+</html>
